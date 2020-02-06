@@ -1,0 +1,11 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.deps.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.runtimeconfig.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.runtimeconfig.dev.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\bin\Debug\netcoreapp3.1\Herencia.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\obj\Debug\netcoreapp3.1\Herencia.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\obj\Debug\netcoreapp3.1\Herencia.AssemblyInfoInputs.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\obj\Debug\netcoreapp3.1\Herencia.AssemblyInfo.cs
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\obj\Debug\netcoreapp3.1\Herencia.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Clase 2\Herencia\obj\Debug\netcoreapp3.1\Herencia.pdb

@@ -1,0 +1,10 @@
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.exe
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.deps.json
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.runtimeconfig.json
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.runtimeconfig.dev.json
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.dll
+C:\Users\betoa\source\repos\Ejercicio4\bin\Debug\netcoreapp3.1\Ejercicio4.pdb
+C:\Users\betoa\source\repos\Ejercicio4\obj\Debug\netcoreapp3.1\Ejercicio4.AssemblyInfoInputs.cache
+C:\Users\betoa\source\repos\Ejercicio4\obj\Debug\netcoreapp3.1\Ejercicio4.AssemblyInfo.cs
+C:\Users\betoa\source\repos\Ejercicio4\obj\Debug\netcoreapp3.1\Ejercicio4.dll
+C:\Users\betoa\source\repos\Ejercicio4\obj\Debug\netcoreapp3.1\Ejercicio4.pdb
