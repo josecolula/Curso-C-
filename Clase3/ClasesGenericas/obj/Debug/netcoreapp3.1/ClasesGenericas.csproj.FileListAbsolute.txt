@@ -1,0 +1,10 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.deps.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.runtimeconfig.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.runtimeconfig.dev.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\bin\Debug\netcoreapp3.1\ClasesGenericas.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\obj\Debug\netcoreapp3.1\ClasesGenericas.AssemblyInfoInputs.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\obj\Debug\netcoreapp3.1\ClasesGenericas.AssemblyInfo.cs
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\obj\Debug\netcoreapp3.1\ClasesGenericas.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase3\ClasesGenericas\obj\Debug\netcoreapp3.1\ClasesGenericas.pdb
