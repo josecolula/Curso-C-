@@ -1,0 +1,11 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.deps.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.runtimeconfig.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.runtimeconfig.dev.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\bin\Debug\netcoreapp3.1\Ejercicio12.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\obj\Debug\netcoreapp3.1\Ejercicio12.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\obj\Debug\netcoreapp3.1\Ejercicio12.AssemblyInfoInputs.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\obj\Debug\netcoreapp3.1\Ejercicio12.AssemblyInfo.cs
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\obj\Debug\netcoreapp3.1\Ejercicio12.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Serie\Ejercicio12\obj\Debug\netcoreapp3.1\Ejercicio12.pdb
