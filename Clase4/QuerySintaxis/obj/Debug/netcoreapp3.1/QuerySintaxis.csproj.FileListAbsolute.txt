@@ -1,0 +1,11 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.deps.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.runtimeconfig.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.runtimeconfig.dev.json
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\bin\Debug\netcoreapp3.1\QuerySintaxis.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\obj\Debug\netcoreapp3.1\QuerySintaxis.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\obj\Debug\netcoreapp3.1\QuerySintaxis.AssemblyInfoInputs.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\obj\Debug\netcoreapp3.1\QuerySintaxis.AssemblyInfo.cs
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\obj\Debug\netcoreapp3.1\QuerySintaxis.dll
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\QuerySintaxis\obj\Debug\netcoreapp3.1\QuerySintaxis.pdb

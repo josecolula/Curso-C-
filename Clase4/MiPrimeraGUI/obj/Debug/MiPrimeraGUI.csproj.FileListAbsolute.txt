@@ -1,0 +1,9 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\bin\Debug\MiPrimeraGUI.exe.config
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\bin\Debug\MiPrimeraGUI.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\bin\Debug\MiPrimeraGUI.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.Form1.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.Properties.Resources.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.csproj.GenerateResource.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\MiPrimeraGUI\obj\Debug\MiPrimeraGUI.pdb

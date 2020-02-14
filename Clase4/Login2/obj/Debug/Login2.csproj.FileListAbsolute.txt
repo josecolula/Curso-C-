@@ -1,0 +1,9 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.Form1.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.Properties.Resources.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.csproj.GenerateResource.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\bin\Debug\Login2.exe.config
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\bin\Debug\Login2.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\bin\Debug\Login2.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Login2\obj\Debug\Login2.pdb
