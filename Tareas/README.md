@@ -40,5 +40,15 @@ entre otras cosas
  ```
  Proyecto Visual Studio
  ```
+Tarea Clase 4
+----------------
+Añadir acciones a las opciones del menu.
 
+* "Negritas" convierte el texto en negritas.
+* "Cursivas" convierte el texto en formato cursivo.
+
+### Compilación
+```
+Proyecto Visual Studio
+```
 

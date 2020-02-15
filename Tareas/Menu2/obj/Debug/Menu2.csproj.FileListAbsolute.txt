@@ -1,0 +1,9 @@
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\bin\Debug\Menu2.exe.config
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\bin\Debug\Menu2.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\bin\Debug\Menu2.pdb
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.csprojAssemblyReference.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.Form1.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.Properties.Resources.resources
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.csproj.GenerateResource.cache
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.exe
+C:\Users\betoa\Desktop\UNAM-CERT\POO\Respaldo\Clase4\Menu2\obj\Debug\Menu2.pdb
