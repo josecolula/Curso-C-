@@ -5,13 +5,17 @@ using System.IO;
 
 namespace Tarea4
 {
+    //Clase Comandos que hereda los metodos y atributos de la clase AdministradorArchivos.
+    //Contiene los atributos y metodos de comandos.
     class Comandos : AdministradorArchivo
     {
+        //Atributos que conteneedores de comandos y argumentos.
         string comando;
         string argumento;
         string argumento2;
         string history;
         static int i;
+        //Métodos get y set de cada argumento.
         public string Argumento
         {
             get { return argumento; }
@@ -32,34 +36,39 @@ namespace Tarea4
             get { return argumento2; }
             set { argumento2 = value; }
         }
+        //Método para Listar el Contenido del directorio especificado.
         public void ListarContenido()
         {
-            //this.comando = comando;
+            
             string aux2 = "";
-            //string aux3 = "";
+            
             int j = Argumento.Length;
-            //Console.WriteLine(Argumento[j - 1]);
+            
             try
             {
+                //Si el directorio termina con \
                 if (Argumento[j - 1] == '\\')
                 {
                     aux2 = Argumento.Substring(0, j - 1);
                     Argumento = aux2;
                 }
+                //Si se trata del directorio "c:\"
                 if (Argumento == "c:")
                 {
                     Argumento = Argumento + "\\";
                 }
-
+                //Si se trata de un subdirectorio de la ruta donde se encuntra el prompt.
                 if (!Argumento.Contains("\\") && Argumento != Ruta)
                 {
                     Argumento = Ruta + "\\" + Argumento;
                 }
-                //Console.WriteLine(Argumento);
+                //Si existe el directorio.
                 if (Directory.Exists(Argumento))
                 {
+                    //Variables que guardan la lista de carpetas y archivos del directorio especficado.
                     var files = Directory.EnumerateFiles(Argumento, "*");
                     var directorys = Directory.EnumerateDirectories(Argumento, "*");
+                    //Ciclos que imprimen las carpetas y archivos.
                     foreach (string directory in directorys)
                     {
                         if (Argumento == "c:\\")
@@ -88,43 +97,53 @@ namespace Tarea4
 
                     }
                 }
+                //Si no se encunetra la ruta especificada.
                 else
                 {
                     Console.WriteLine("El sistema no puede encontrar la ruta especificada");
                 }
             }
+            //Excepción argumentos invalidos
             catch(IndexOutOfRangeException ie)
             {
-                Console.WriteLine("Escpacios Invalidos");
+                Console.WriteLine("Espacios Invalidos");
             }
 
  
         }
+        //Método que limipia la pantalla.
         public void Limpiar()
         {
             Console.Clear();
         }
+        //Método para salir de la aplicación.
         public void Salir()
         {
             Environment.Exit(1);
         }
+        //Método para mostrar el historial, de comandos.
         public void MostrarHistorial()
         {
             Console.WriteLine(history);
 
         }
+        //Método para cambiar de directorio.
         public void CambiarDirectorio()
         {
+            //Si se trata del comando "cd .."
             if (Argumento == "..")
             {
                 string[] aux  = Ruta.Split(@"\");
                 string aux2 = "";
+                //Ciclo para quitar el última carpeta de la ruta.
                 for(int i=0;i<aux.Length-1; i++)
                 {
+                    //Si la ruta es igual es c:\
                     if(aux.Length-1 == 1)
                     {
                         aux2 = aux[i] + "\\";
                     }
+                    //Si se trata de otra ruta.
                     else
                     {
                         if (i == 0)
@@ -141,46 +160,54 @@ namespace Tarea4
                 Ruta = aux2;
 
             }
+            //Si se trata de "cd ruta"
             else
             {
                 string aux2 = "";
                 int j = Argumento.Length;
-                //Console.WriteLine(Argumento[j - 1]);
+                //Si el argumento (ruta) contiene una "\" al finalizar.
                 if (Argumento[j - 1] == '\\')
                 {
                     aux2 = Argumento.Substring(0, j - 1);
                     Argumento = aux2;
                 }
+                //Si se trata del directorio "C:\"
                 if (Argumento == "c:")
                 {
                     Argumento = Argumento + "\\";
                 }
+                //Si se trata de un subcarpeta del directorio actual del prompt.
                 if (!Argumento.Contains("\\") && Argumento != Ruta)
                 {
                     Argumento = Ruta + "\\" + Argumento;
                 }
+                //Si existe el directorio(ruta).
                 if (Directory.Exists(Argumento))
                 {
                     Ruta = Argumento;
                 }
+                //Si no existe la ruta.
                 else
                 {
                     Console.WriteLine("El sistema no puede encontrar la ruta especificada");
                 }
             }
         }
+        //Método para crear un archivo.
         public void CrearArchivo()
         {
+            //Crear un archivo en el directroio actual del prompt.
             if (!Argumento.Contains("\\") && Argumento != Ruta)
             {
                 Argumento = Ruta + "\\" + Argumento;
             }
-            //Console.WriteLine(Argumento);
+            //Si no existe el archivo.
             if(!File.Exists(Argumento))
             {
                 try
                 {
-                    using (StreamWriter sw = File.CreateText(Argumento)) ;
+                    //Creación del archivo.
+                    using (StreamWriter sw = File.CreateText(Argumento));
                 }
                 catch(IOException io)
                 {
@@ -197,12 +224,15 @@ namespace Tarea4
             }
 
         }
+        //Método para cambiar de directorio un archivo.
         public void MoverArchivo()
         {
             string copy = "";
             string arg = Argumento;
+            //Si la directorio a donde se va a mover, no termina con una "\"
             if (!(Argumento2[Argumento2.Length - 1] == '\\'))
             {
+                //Si se trata de la ruta del archivo.
                 if (Argumento.Contains("\\"))
                 {
                     string[] name = Argumento.Split("\\");
@@ -210,6 +240,7 @@ namespace Tarea4
                 }
                 copy = Argumento2 + "\\" + arg;
             }
+            //Si termina en "\"
             else
             {
                 if (Argumento.Contains("\\"))
@@ -219,42 +250,51 @@ namespace Tarea4
                 }
                 copy = Argumento2 + arg;
             }
-
+            //Archivo que se encuntra en el directorio actual del prompt.
             if (!Argumento.Contains("\\") && Argumento != Ruta)
             {
                 Argumento = Ruta + "\\" + Argumento;
             }
-            string comp = Argumento2;
-            //Console.WriteLine(Argumento);
-            //Console.WriteLine(Argumento2);
-            if(File.Exists(Argumento) && Directory.Exists(Argumento2))
+            //Si existe el archivo.
+            if(File.Exists(Argumento))
             {
-                try
+                //Si existe el directorio, destino.
+                if(Directory.Exists(Argumento2))
                 {
-                    if (!File.Exists(copy))
+                    try
                     {
-                        File.Copy(Argumento, copy);
-                        File.Delete(Argumento);
+                        //Si no existe el archivo en el directorio destino.
+                        if (!File.Exists(copy))
+                        {
+                            File.Copy(Argumento, copy);
+                            File.Delete(Argumento);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Existe un archivo igual en la directorio destino");
+                        }
                     }
-                    else
+                    catch (UnauthorizedAccessException ua)
                     {
-                        Console.WriteLine("Existe un archivo igual en la directorio destino");
+                        Console.WriteLine("No cuentas con los privilegios para editar el directorio");
                     }
                 }
-                catch (UnauthorizedAccessException ua)
+                //Si los argumentos no tienen el mismo formato.
+                else if (Argumento2[0] == ' ')
                 {
-                    Console.WriteLine("No cuentas con los privilegios para editar el directorio");
+                    Console.WriteLine("Los argumentos deben llevar el mismo formato");
+                    Console.WriteLine("Las dos rutas deben de llevar comillas(\") o sin comillas");
+                }
+                else
+                {
+                    Console.WriteLine("Directorio no encontrado");
                 }
 
-            }
-            else if(Argumento2 == comp)
-            {
-                Console.WriteLine("Los argumentos deben llevar el mismo formato");
-                Console.WriteLine("Las dos rutas deben de llevar comillas(\") o sin comillas");
+
             }
             else
             {
-                Console.WriteLine("Nombre del archivo o la ruta no son correctas");
+                Console.WriteLine("Archivo inexistente");
             }
         }
     }
