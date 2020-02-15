@@ -11,12 +11,12 @@ namespace Tarea4
             string haux = "";
             string aux = "";
             string aux2 = "";
-            string[] linea3;
+            //string[] linea3;
             int k;
             aa.Iniciar();
             aa.Prompt();
             string linea = Console.ReadLine();
-            linea.ToLower();
+            linea = linea.ToLower();
             string[] linea2 = linea.Split(" ");
             if (linea.Contains("\""))
             {
@@ -33,18 +33,25 @@ namespace Tarea4
             {
                 linea2 = linea.Split(" ");
             }
-            linea3 = linea.Split(" ");
-            //Console.WriteLine(linea2[0]);
-            //Console.WriteLine(linea2[1]);
             int n = 0;
             for (int m = 0; m < linea2.Length; m++)
             {
-                if (!(linea2[m] == ""))
+                if (!(linea2[m] == "" || linea2[m] == " "))
+                {
+                    n++;
+                }
+            }
+            string[] linea3 = new string[n];
+            n = 0;
+            for (int m = 0; m < linea2.Length; m++)
+            {
+                if (!(linea2[m] == "" || linea2[m] == " "))
                 {
                     linea3[n] = linea2[m];
                     n++;
                 }
             }
+            //Console.WriteLine(linea3.Length);
             int i = 0;
             while (linea3[0] != "exit")
             {
@@ -54,7 +61,7 @@ namespace Tarea4
                     Console.WriteLine();
                     aa.Prompt();
                     linea = Console.ReadLine();
-                    linea.ToLower();
+                    linea = linea.ToLower();
                     if (linea.Contains("\""))
                     {
                         linea2 = linea.Split("\"");
@@ -73,18 +80,28 @@ namespace Tarea4
                     int c = 0;
                     for (int m = 0; m < linea2.Length; m++)
                     {
-                        if (!(linea2[m] == ""))
+                        if (!(linea2[m] == "" || linea2[m] == " "))
+                        {
+                            c++;
+                        }
+                    }
+                    linea3 = new string[c];
+                    c = 0;
+                    for (int m = 0; m < linea2.Length; m++)
+                    {
+                        if (!(linea2[m] == "" || linea2[m] == " "))
                         {
                             linea3[c] = linea2[m];
                             c++;
                         }
                     }
+                    //Console.WriteLine(linea3.Length);
                 }
-                if (linea2.Length < 3 || ((linea2.Length == 3) && (linea2[2] == "")))
+                if (linea3.Length < 3)
                 {
-                    if(linea2[0] == "dir")
+                    if(linea3[0] == "dir")
                     {
-                        if(linea2.Length < 2 || linea2[1] == "")
+                        if(linea3.Length < 2)
                         {
                             aa.Comando = "dir";
                             aa.Argumento = aa.Ruta;
@@ -94,14 +111,14 @@ namespace Tarea4
                         else
                         {
                             aa.Comando = "dir";
-                            aa.Argumento = linea2[1];
+                            aa.Argumento = linea3[1];
                             aa.ListarContenido();
                             haux = haux + "\n" + linea;
                         }
                     }
-                    else if(linea2[0] == "cls")
+                    else if(linea3[0] == "cls")
                     {
-                        if(linea2.Length < 2)
+                        if(linea3.Length < 2)
                         {
                             aa.Limpiar();
                             haux = haux + "\n" + linea;
@@ -109,11 +126,12 @@ namespace Tarea4
                         else
                         {
                             Console.WriteLine("Argumentos Invalidos");
+                            haux = haux + "\n" + linea;
                         }
                     }
-                    else if (linea2[0] == "history")
+                    else if (linea3[0] == "history")
                     {
-                        if (linea2.Length < 2)
+                        if (linea3.Length < 2)
                         {
                             aa.Historial = haux;
                             aa.MostrarHistorial();
@@ -122,68 +140,99 @@ namespace Tarea4
                         else
                         {
                             Console.WriteLine("Argumentos Invalidos");
+                            haux = haux + "\n" + linea;
                         }
                     }
-                    else if(linea2[0] == "cd")
+                    else if(linea3[0] == "cd")
                     {
-                        if(linea2.Length > 1)
+                        if(linea3.Length > 1)
                         {
-                            aa.Comando = linea2[0];
-                            aa.Argumento = linea2[1];
+                            aa.Comando = linea3[0];
+                            aa.Argumento = linea3[1];
                             aa.CambiarDirectorio();
                             haux = haux + "\n" + linea;
                         }
                         else
                         {
                             Console.WriteLine("Faltan argumentos");
+                            haux = haux + "\n" + linea;
                         }
 
                     }
-                    else if(linea2[0] == "touch")
+                    else if(linea3[0] == "touch")
                     {
-                        if (linea2.Length > 1)
+                        if (linea3.Length > 1)
                         {
-                            aa.Comando = linea2[0];
-                            aa.Argumento = linea2[1];
+                            aa.Comando = linea3[0];
+                            aa.Argumento = linea3[1];
                             aa.CrearArchivo();
                             haux = haux + "\n" + linea;
                         }
                         else
                         {
                             Console.WriteLine("Faltan argumentos");
+                            haux = haux + "\n" + linea;
                         }
 
                     }
-                    else if (linea2[0] == "exit")
+                    else if (linea3[0] == "exit")
                     {
-                        if (linea2.Length < 2)
+                        if (linea3.Length < 2)
                         {
                             aa.Salir();
+                            haux = haux + "\n" + linea;
                         }
                         else
                         {
                             Console.WriteLine("Argumentos Invalidos");
+                            haux = haux + "\n" + linea;
                             Console.WriteLine();
                         }
                     }
-                    else if(linea2[0] == "move")
+                    else if(linea3[0] == "move")
                     {
                         Console.WriteLine("Faltan Argumentos");
+                        haux = haux + "\n" + linea;
                     }
                     else
                     {
-                        Console.WriteLine("No se reconoce: {0}", linea2[0]);
+                        Console.WriteLine("No se reconoce: {0}", linea3[0]);
+                        haux = haux + "\n" + linea;
                     }
                 }
-                else if(linea2.Length == 3)
+                else if(linea3.Length > 2)
                 {
-                    if(linea2[0] == "move")
+                    if(linea3[0] == "move")
                     {
-                        aa.Argumento = linea2[1];
-                        aa.Argumento2 = linea2[2];
-                        aa.MoverArchivo();
-
+                        if(linea3.Length < 4)
+                        {
+                            aa.Comando = linea3[0];
+                            aa.Argumento = linea3[1];
+                            aa.Argumento2 = linea3[2];
+                            haux = haux + "\n" + linea;
+                            aa.MoverArchivo();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Argumentos Invalidos");
+                            haux = haux + "\n" + linea;
+                        }
                     }
+                    else if(linea3[0] == "dir" || linea3[0] == "cd" || linea3[0] == "touch" || linea3[0] == "history" || linea3[0] == "cls" || linea3[0] == "exit")
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                    }
+                    else
+                    {
+                        Console.WriteLine("No se reconoce: {0}", linea3[0]);
+                        haux = haux + "\n" + linea;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Muchos argumentos");
                 }
             }
         }

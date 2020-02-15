@@ -39,57 +39,66 @@ namespace Tarea4
             //string aux3 = "";
             int j = Argumento.Length;
             //Console.WriteLine(Argumento[j - 1]);
-            if (Argumento[j - 1] == '\\')
+            try
             {
-                aux2 = Argumento.Substring(0, j - 1);
-                Argumento = aux2;
-            }
-            if (Argumento == "c:")
-            {
-                Argumento = Argumento + "\\";
-            }
-
-            if (!Argumento.Contains("\\") && Argumento != Ruta)
-            {
-                Argumento = Ruta + "\\" + Argumento;
-            }
-            //Console.WriteLine(Argumento);
-            if(Directory.Exists(Argumento))
-            {
-                var files = Directory.EnumerateFiles(Argumento, "*");
-                var directorys = Directory.EnumerateDirectories(Argumento, "*");
-                foreach (string directory in directorys)
+                if (Argumento[j - 1] == '\\')
                 {
-                    if(Argumento == "c:\\")
+                    aux2 = Argumento.Substring(0, j - 1);
+                    Argumento = aux2;
+                }
+                if (Argumento == "c:")
+                {
+                    Argumento = Argumento + "\\";
+                }
+
+                if (!Argumento.Contains("\\") && Argumento != Ruta)
+                {
+                    Argumento = Ruta + "\\" + Argumento;
+                }
+                //Console.WriteLine(Argumento);
+                if (Directory.Exists(Argumento))
+                {
+                    var files = Directory.EnumerateFiles(Argumento, "*");
+                    var directorys = Directory.EnumerateDirectories(Argumento, "*");
+                    foreach (string directory in directorys)
                     {
-                        string directoryName = directory.Substring(Argumento.Length);
-                        Console.WriteLine(directoryName);
+                        if (Argumento == "c:\\")
+                        {
+                            string directoryName = directory.Substring(Argumento.Length);
+                            Console.WriteLine(directoryName);
+                        }
+                        else
+                        {
+                            string directoryName = directory.Substring(Argumento.Length + 1);
+                            Console.WriteLine(directoryName);
+                        }
                     }
-                    else
+                    foreach (string file in files)
                     {
-                        string directoryName = directory.Substring(Argumento.Length + 1);
-                        Console.WriteLine(directoryName);
+                        if (Argumento == "c:\\")
+                        {
+                            string fileName = file.Substring(Argumento.Length);
+                            Console.WriteLine(fileName);
+                        }
+                        else
+                        {
+                            string fileName = file.Substring(Argumento.Length + 1);
+                            Console.WriteLine(fileName);
+                        }
+
                     }
                 }
-                foreach (string file in files)
+                else
                 {
-                    if(Argumento == "c:\\")
-                    {
-                        string fileName = file.Substring(Argumento.Length);
-                        Console.WriteLine(fileName);
-                    }
-                    else
-                    {
-                        string fileName = file.Substring(Argumento.Length + 1);
-                        Console.WriteLine(fileName);
-                    }
-
+                    Console.WriteLine("El sistema no puede encontrar la ruta especificada");
                 }
             }
-            else
+            catch(IndexOutOfRangeException ie)
             {
-                Console.WriteLine("El sistema no puede encontrar la ruta especificada");
+                Console.WriteLine("Escpacios Invalidos");
             }
+
+ 
         }
         public void Limpiar()
         {
@@ -194,9 +203,10 @@ namespace Tarea4
             string arg = Argumento;
             if (!(Argumento2[Argumento2.Length - 1] == '\\'))
             {
-                if(Argumento.Contains("\\"))
+                if (Argumento.Contains("\\"))
                 {
-                    arg = Argumento.Substring(Ruta.Length + 1);
+                    string[] name = Argumento.Split("\\");
+                    arg = name[name.Length - 1];
                 }
                 copy = Argumento2 + "\\" + arg;
             }
@@ -214,8 +224,8 @@ namespace Tarea4
                 Argumento = Ruta + "\\" + Argumento;
             }
 
-            Console.WriteLine(Argumento);
-            Console.WriteLine(Argumento2);
+            //Console.WriteLine(Argumento);
+            //Console.WriteLine(Argumento2);
             if(File.Exists(Argumento) && Directory.Exists(Argumento2))
             {
                 try

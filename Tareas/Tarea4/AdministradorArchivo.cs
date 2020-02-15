@@ -21,6 +21,7 @@ namespace Tarea4
         public void Iniciar()
         {
             ruta = @"c:\Users\" + Environment.UserName + @"\Documents";
+            ruta = ruta.ToLower();
             if(!Directory.Exists(ruta))
             {
                 ruta = @"c:\Usuarios\" + Environment.UserName + @"\Documentos";
