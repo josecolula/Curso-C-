@@ -24,4 +24,21 @@ El programa no puede dar una calificación mayor a 10 ni dar una calificación m
 Proyecto Visual Studio 
 ```
 
+Tarea 4
+------------------
+Esta tarea simulará un explorador de archivos en modo consola, permitirá al usuario ingresar
+comandos y argumentos para dichos comandos que ejecutarán acciones en el sistema de
+archivos, entre las acciones se encuentran: crear, copiar y mover archivos, cambiar directorios,
+entre otras cosas
+
+### Consideracciones
+ * Los cambios de directorios solo aceptan rutas absolutas, o el nombe del una subcarpeta inmediata a la ruta del prompt.
+ * Los dos argumentos del comando move debe de ir comillas, si se requiere, o si sin comillas, pero se tienen que especificar los dos argumentos con el mismo formato.
+ * Una carpeta con espacios en su nombre debe de ir entre comillas.
+
+ ### Compilación
+ ```
+ Proyecto Visual Studio
+ ```
+
 
