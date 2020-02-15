@@ -97,142 +97,148 @@ namespace Tarea4
                     }
                     //Console.WriteLine(linea3.Length);
                 }
-                if (linea3.Length < 3)
+                if (linea3[0] == "dir")
                 {
-                    if(linea3[0] == "dir")
+                    if (linea3.Length == 1)
                     {
-                        if(linea3.Length < 2)
-                        {
-                            aa.Comando = "dir";
-                            aa.Argumento = aa.Ruta;
-                            aa.ListarContenido();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            aa.Comando = "dir";
-                            aa.Argumento = linea3[1];
-                            aa.ListarContenido();
-                            haux = haux + "\n" + linea;
-                        }
+                        aa.Comando = "dir";
+                        aa.Argumento = aa.Ruta;
+                        aa.ListarContenido();
+                        haux = haux + "\n" + linea;
                     }
-                    else if(linea3[0] == "cls")
+                    else if(linea3.Length == 2)
                     {
-                        if(linea3.Length < 2)
-                        {
-                            aa.Limpiar();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Argumentos Invalidos");
-                            haux = haux + "\n" + linea;
-                        }
-                    }
-                    else if (linea3[0] == "history")
-                    {
-                        if (linea3.Length < 2)
-                        {
-                            aa.Historial = haux;
-                            aa.MostrarHistorial();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Argumentos Invalidos");
-                            haux = haux + "\n" + linea;
-                        }
-                    }
-                    else if(linea3[0] == "cd")
-                    {
-                        if(linea3.Length > 1)
-                        {
-                            aa.Comando = linea3[0];
-                            aa.Argumento = linea3[1];
-                            aa.CambiarDirectorio();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Faltan argumentos");
-                            haux = haux + "\n" + linea;
-                        }
-
-                    }
-                    else if(linea3[0] == "touch")
-                    {
-                        if (linea3.Length > 1)
-                        {
-                            aa.Comando = linea3[0];
-                            aa.Argumento = linea3[1];
-                            aa.CrearArchivo();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Faltan argumentos");
-                            haux = haux + "\n" + linea;
-                        }
-
-                    }
-                    else if (linea3[0] == "exit")
-                    {
-                        if (linea3.Length < 2)
-                        {
-                            aa.Salir();
-                            haux = haux + "\n" + linea;
-                        }
-                        else
-                        {
-                            Console.WriteLine("Argumentos Invalidos");
-                            haux = haux + "\n" + linea;
-                            Console.WriteLine();
-                        }
-                    }
-                    else if(linea3[0] == "move")
-                    {
-                        Console.WriteLine("Faltan Argumentos");
+                        aa.Comando = "dir";
+                        aa.Argumento = linea3[1];
+                        aa.ListarContenido();
                         haux = haux + "\n" + linea;
                     }
                     else
                     {
-                        Console.WriteLine("No se reconoce: {0}", linea3[0]);
+                        Console.WriteLine("Argumentos Invalidos");
                         haux = haux + "\n" + linea;
                     }
                 }
-                else if(linea3.Length > 2)
+                else if (linea3[0] == "cls")
                 {
-                    if(linea3[0] == "move")
+                    if (linea3.Length < 2)
                     {
-                        if(linea3.Length < 4)
-                        {
-                            aa.Comando = linea3[0];
-                            aa.Argumento = linea3[1];
-                            aa.Argumento2 = linea3[2];
-                            haux = haux + "\n" + linea;
-                            aa.MoverArchivo();
-                        }
-                        else
-                        {
-                            Console.WriteLine("Argumentos Invalidos");
-                            haux = haux + "\n" + linea;
-                        }
+                        aa.Limpiar();
+                        haux = haux + "\n" + linea;
                     }
-                    else if(linea3[0] == "dir" || linea3[0] == "cd" || linea3[0] == "touch" || linea3[0] == "history" || linea3[0] == "cls" || linea3[0] == "exit")
+                    else
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                    }
+                }
+                else if (linea3[0] == "history")
+                {
+                    if (linea3.Length < 2)
+                    {
+                        aa.Historial = haux;
+                        aa.MostrarHistorial();
+                        haux = haux + "\n" + linea;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                    }
+                }
+                else if (linea3[0] == "cd" || linea3[0] == "cd..")
+                {
+                    if (linea3.Length > 1)
+                    {
+                        aa.Comando = linea3[0];
+                        aa.Argumento = linea3[1];
+                        aa.CambiarDirectorio();
+                        haux = haux + "\n" + linea;
+                    }
+                    else if(linea3.Length == 1 && linea3[0].Contains(".."))
+                    {
+                        aa.Comando = "cd";
+                        aa.Argumento = "..";
+                        aa.CambiarDirectorio();
+                        haux = haux + "\n" + linea;
+                    }
+                    else if(linea3.Length > 2)
                     {
                         Console.WriteLine("Argumentos Invalidos");
                         haux = haux + "\n" + linea;
                     }
                     else
                     {
-                        Console.WriteLine("No se reconoce: {0}", linea3[0]);
+                        Console.WriteLine("Faltan Argumentos");
                         haux = haux + "\n" + linea;
                     }
 
                 }
+                else if (linea3[0] == "touch")
+                {
+                    if (linea3.Length == 2)
+                    {
+                        aa.Comando = linea3[0];
+                        aa.Argumento = linea3[1];
+                        aa.CrearArchivo();
+                        haux = haux + "\n" + linea;
+                    }
+                    else if(linea3.Length > 2)
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Faltan Argumentos");
+                        haux = haux + "\n" + linea;
+                    }
+
+                }
+                else if (linea3[0] == "exit")
+                {
+                    if (linea3.Length < 2)
+                    {
+                        aa.Salir();
+                        haux = haux + "\n" + linea;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                        Console.WriteLine();
+                    }
+                }
+                else if (linea3[0] == "move")
+                {
+                    if (linea3.Length == 3)
+                    {
+                        aa.Comando = linea3[0];
+                        aa.Argumento = linea3[1];
+                        aa.Argumento2 = linea3[2];
+                        haux = haux + "\n" + linea;
+                        aa.MoverArchivo();
+                    }
+                    else if(linea3.Length < 3)
+                    {
+                        Console.WriteLine("Faltan Argumentos");
+                        haux = haux + "\n" + linea;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Argumentos Invalidos");
+                        haux = haux + "\n" + linea;
+                    }
+                }
                 else
                 {
-                    Console.WriteLine("Muchos argumentos");
+                    if(linea3[0].Contains("move ")) 
+                    {
+                        Console.WriteLine("Los argumentos deben llevar el mismo formato");
+                        Console.WriteLine("Las dos rutas deben de llevar comillas(\") o sin comillas");
+                    }
+                    Console.WriteLine("No se reconoce: {0}", linea3[0]);
+                    haux = haux + "\n" + linea;
                 }
             }
         }

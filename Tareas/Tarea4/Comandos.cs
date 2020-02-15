@@ -214,7 +214,8 @@ namespace Tarea4
             {
                 if (Argumento.Contains("\\"))
                 {
-                    arg = Argumento.Substring(Ruta.Length + 1);
+                    string[] name2 = Argumento.Split("\\");
+                    arg = name2[name2.Length - 1];
                 }
                 copy = Argumento2 + arg;
             }
@@ -223,7 +224,7 @@ namespace Tarea4
             {
                 Argumento = Ruta + "\\" + Argumento;
             }
-
+            string comp = Argumento2;
             //Console.WriteLine(Argumento);
             //Console.WriteLine(Argumento2);
             if(File.Exists(Argumento) && Directory.Exists(Argumento2))
@@ -245,6 +246,11 @@ namespace Tarea4
                     Console.WriteLine("No cuentas con los privilegios para editar el directorio");
                 }
 
+            }
+            else if(Argumento2 == comp)
+            {
+                Console.WriteLine("Los argumentos deben llevar el mismo formato");
+                Console.WriteLine("Las dos rutas deben de llevar comillas(\") o sin comillas");
             }
             else
             {
